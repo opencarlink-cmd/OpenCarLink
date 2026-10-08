@@ -4,9 +4,12 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
+<h3 align="center">科技不是高高在上，而是服务于人民</h3>
+<p align="center">Technology is not superior, but serving the people</p>
+
 ![Status](https://img.shields.io/badge/status-early%20development-orange)
 
-OpenCarLink is an Android app for car head units. It provides protocol code support for CarPlay, Android Auto, ICCOA, CarLife, Carbit, HiCar, AirPlay, and Miracast, and runs on Android 4.4 through Android 17.
+OpenCarLink is an Android app for car head units. It provides protocol code support for CarPlay, Android Auto, ICCOA, CarLife, CarbitLink, HiCar, AirPlay, and Miracast, and runs on Android 4.4 through Android 17.
 
 It is intended for developers, head unit manufacturers, and end users.
 
@@ -22,7 +25,7 @@ OpenCarLink is in the early development stage.
 
 ## Features
 
-- Protocol code support for 8 protocols: CarPlay, Android Auto, ICCOA, CarLife, Carbit, HiCar, AirPlay, and Miracast
+- Protocol code support for 8 protocols: CarPlay, Android Auto, ICCOA, CarLife, CarbitLink, HiCar, AirPlay, and Miracast
 - Runs on the head unit, compatible with Android 4.4 - Android 17
 - Open source under the Apache License 2.0
 
@@ -37,7 +40,7 @@ OpenCarLink is in the early development stage.
 
 **Which protocols are supported?**
 
-Eight: CarPlay, Android Auto, ICCOA, CarLife, Carbit, HiCar, AirPlay, and Miracast.
+Eight: CarPlay, Android Auto, ICCOA, CarLife, CarbitLink, HiCar, AirPlay, and Miracast.
 
 **Which Android versions are supported?**
 
@@ -65,7 +68,7 @@ OpenCarLink is licensed under the Apache License 2.0, which permits commercial u
 
 ## Trademarks
 
-CarPlay, Android Auto, ICCOA, CarLife, Carbit, HiCar, AirPlay, and Miracast are trademarks or registered trademarks of their respective owners.
+CarPlay, Android Auto, ICCOA, CarLife, CarbitLink, HiCar, AirPlay, and Miracast are trademarks or registered trademarks of their respective owners.
 
 OpenCarLink is an independent project. It is not affiliated with, endorsed by, or certified by any of these trademark owners. All product names and brands are used for identification purposes only.
 

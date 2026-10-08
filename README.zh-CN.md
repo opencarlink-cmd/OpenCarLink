@@ -4,9 +4,12 @@
 
 [English](README.md) | **简体中文**
 
+<h3 align="center">科技不是高高在上，而是服务于人民</h3>
+<p align="center">Technology is not superior, but serving the people</p>
+
 ![状态](https://img.shields.io/badge/status-%E6%97%A9%E6%9C%9F%E5%BC%80%E5%8F%91-orange)
 
-OpenCarLink 是一款运行在车机端的 Android 应用，提供 CarPlay、Android Auto、ICCOA、CarLife、Carbit、HiCar、AirPlay、Miracast 协议代码支持，兼容 Android 4.4 - Android 17。
+OpenCarLink 是一款运行在车机端的 Android 应用，提供 CarPlay、Android Auto、ICCOA、CarLife、CarbitLink、HiCar、AirPlay、Miracast 协议代码支持，兼容 Android 4.4 - Android 17。
 
 适用于开发者、车机厂商与终端车主。
 
@@ -22,7 +25,7 @@ OpenCarLink 目前处于早期开发阶段。
 
 ## 特性
 
-- 提供 8 种协议代码支持：CarPlay、Android Auto、ICCOA、CarLife、Carbit、HiCar、AirPlay、Miracast
+- 提供 8 种协议代码支持：CarPlay、Android Auto、ICCOA、CarLife、CarbitLink、HiCar、AirPlay、Miracast
 - 运行于车机端，兼容 Android 4.4 - Android 17
 - 基于 Apache License 2.0 开源
 
@@ -37,7 +40,7 @@ OpenCarLink 目前处于早期开发阶段。
 
 **支持哪些协议？**
 
-CarPlay、Android Auto、ICCOA、CarLife、Carbit、HiCar、AirPlay、Miracast，共 8 种协议代码支持。
+CarPlay、Android Auto、ICCOA、CarLife、CarbitLink、HiCar、AirPlay、Miracast，共 8 种协议代码支持。
 
 **支持哪些 Android 版本？**
 
@@ -65,7 +68,7 @@ CarPlay、Android Auto、ICCOA、CarLife、Carbit、HiCar、AirPlay、Miracast�
 
 ## 商标声明
 
-CarPlay、Android Auto、ICCOA、CarLife、Carbit、HiCar、AirPlay、Miracast 均为其各自权利人的商标或注册商标。
+CarPlay、Android Auto、ICCOA、CarLife、CarbitLink、HiCar、AirPlay、Miracast 均为其各自权利人的商标或注册商标。
 
 OpenCarLink 是独立项目，与上述商标权利人无隶属、背书或认证关系。所有产品名称与品牌仅用于说明兼容范围。
 
