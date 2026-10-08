@@ -1,0 +1,15 @@
+// Declare Android plugins for subprojects without applying them to the root project.
+// 为子模块声明 Android 插件，但不将插件应用到根项目。
+plugins {
+    id 'com.android.application' version '9.2.1' apply false
+    id 'com.android.library' version '9.2.1' apply false
+}
+
+// Keep shared Android SDK and Java versions in the root project as the single source of truth.
+// 将共享的 Android SDK 与 Java 版本放在根项目，作为唯一维护来源。
+ext {
+    openCarLinkCompileSdk = 37
+    openCarLinkMinSdk = 19
+    openCarLinkTargetSdk = 37
+    openCarLinkJavaVersion = JavaVersion.VERSION_11
+}

@@ -1,0 +1,48 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+// Configure plugin repositories for the root build and all included modules.
+// 为根构建及所有包含的模块配置插件仓库。
+pluginManagement {
+    repositories {
+        // Prefer domestic mirrors to reduce dependency resolution latency in China.
+        // 优先使用国内镜像，降低国内环境的依赖解析延迟。
+        maven { url = uri('https://maven.aliyun.com/repository/google') }
+        maven { url = uri('https://maven.aliyun.com/repository/gradle-plugin') }
+        maven { url = uri('https://maven.aliyun.com/repository/public') }
+        maven { url = uri('https://mirrors.cloud.tencent.com/nexus/repository/maven-public/') }
+        maven { url = uri('https://mirrors.huaweicloud.com/repository/maven/') }
+
+        // Keep official repositories as fallbacks for artifacts missing from mirrors.
+        // 保留官方仓库作为回退，处理镜像尚未同步的构件。
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+// Resolve dependencies only from the repositories declared below.
+// 仅从下方声明的仓库解析依赖，避免模块各自定义仓库造成版本漂移。
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        // Resolve project dependencies from mirrors first, then official repositories.
+        // 项目依赖优先从国内镜像解析，缺失时回退到官方仓库。
+        maven { url = uri('https://maven.aliyun.com/repository/google') }
+        maven { url = uri('https://maven.aliyun.com/repository/public') }
+        maven { url = uri('https://mirrors.cloud.tencent.com/nexus/repository/maven-public/') }
+        maven { url = uri('https://mirrors.huaweicloud.com/repository/maven/') }
+
+        google()
+        mavenCentral()
+    }
+}
+
+// Keep the root project name aligned with the repository and product name.
+// 根项目名称与仓库及产品名称保持一致。
+rootProject.name = 'OpenCarLink'
+
+// Include the application and Android library modules required by the project.
+// 包含项目所需的应用模块和 Android Library 模块。
+include ':OpenCarLink'
+include ':OpenCarPlay'
+include ':OpenLanguage'

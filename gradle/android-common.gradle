@@ -1,0 +1,27 @@
+// Central Android defaults shared by every module in this project.
+// 本项目所有模块共享的 Android 默认配置。
+
+android {
+    // Compile every Android module against the same platform.
+    // 所有 Android 模块统一使用同一平台编译。
+    compileSdk = rootProject.ext.openCarLinkCompileSdk
+
+    defaultConfig {
+        // Keep the minimum runtime baseline aligned across modules.
+        // 保持所有模块的最低运行时基线一致。
+        minSdk = rootProject.ext.openCarLinkMinSdk
+
+        // targetSdk belongs only to Android application modules.
+        // targetSdk 只属于 Android Application 模块。
+        if (project.plugins.hasPlugin('com.android.application')) {
+            targetSdk = rootProject.ext.openCarLinkTargetSdk
+        }
+    }
+
+    compileOptions {
+        // Use Java 11 language features; runtime API compatibility checks remain mandatory.
+        // 使用 Java 11 语言特性；运行时 API 兼容检查仍然必须保留。
+        sourceCompatibility = rootProject.ext.openCarLinkJavaVersion
+        targetCompatibility = rootProject.ext.openCarLinkJavaVersion
+    }
+}
