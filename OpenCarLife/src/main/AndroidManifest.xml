@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The library intentionally declares no components until protocol APIs are defined. -->
+<!-- 在协议 API 定义前，该 Library 刻意不声明任何组件。 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" />

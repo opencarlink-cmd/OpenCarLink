@@ -1,0 +1,15 @@
+plugins {
+    // Apply the Android library plugin because this module is consumed by an Android app.
+    // 应用 Android Library 插件，因为该模块由 Android 应用消费。
+    id 'com.android.library'
+}
+
+// Apply shared Android SDK and Java defaults after the Android plugin is available.
+// 在 Android 插件可用后应用共享的 Android SDK 与 Java 默认配置。
+apply from: rootProject.file('gradle/android-common.gradle')
+
+android {
+    // Keep the library namespace stable for generated R and BuildConfig classes.
+    // 保持 Library 命名空间稳定，用于生成 R 类和 BuildConfig 类。
+    namespace = 'com.opencarlink.auto'
+}
