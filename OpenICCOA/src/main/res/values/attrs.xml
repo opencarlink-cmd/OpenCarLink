@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="lengthByChar" format="integer" />
+    <attr name="widthPercent" format="float" />
+
+    <declare-styleable name="UCarAutoScaleTextView">
+        <attr name="lengthByChar" />
+        <attr name="widthPercent" />
+    </declare-styleable>
+
+    <declare-styleable name="UCarPinCodeView">
+        <attr name="widthPercent" />
+    </declare-styleable>
+</resources>

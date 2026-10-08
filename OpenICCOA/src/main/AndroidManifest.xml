@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Keep the runtime permissions required by the migrated ICCOA connection stack. -->
+    <!-- 保留迁移后的 ICCOA 连接栈所需的运行时权限。 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_USB" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
+    <uses-permission android:name="android.permission.NETWORK_STACK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.TETHER_PRIVILEGED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG" />
+
+    <!-- Keep the hardware capabilities required by the migrated ICCOA transport implementations. -->
+    <!-- 保留迁移后的 ICCOA 传输实现所需的硬件能力声明。 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <application android:name="com.ucarhu.demo.CarLinkApplication">
+
+        <!-- The migrated screen remains available to the host application through ACTION_VIEW. -->
+        <!-- 迁移后的界面通过 ACTION_VIEW 提供给宿主应用调用。 -->
+        <activity
+            android:name="com.ucarhu.demo.CarLinkCastActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoTitle_FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <!-- Keep the migrated connection services available for manifest merging. -->
+        <!-- 保留迁移后的连接服务，供宿主应用进行 Manifest 合并。 -->
+        <service
+            android:name="com.share.connect.ble.BluetoothLeService"
+            android:exported="false" />
+        <service
+            android:name="com.share.connect.wifip2p.WifiP2pService"
+            android:exported="false" />
+        <service
+            android:name="com.share.connect.wifiap.WifiApService"
+            android:exported="false" />
+        <service
+            android:name="com.share.connect.ShareLinkService"
+            android:exported="false" />
+
+        <!-- Keep Room multi-instance invalidation support for the migrated peer database. -->
+        <!-- 为迁移后的对端数据库保留 Room 多实例失效通知支持。 -->
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

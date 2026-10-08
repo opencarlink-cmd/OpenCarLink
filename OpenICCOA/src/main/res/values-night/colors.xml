@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night palette for the migrated ICCOA projection screens. -->
+    <!-- 迁移后的 ICCOA 投屏界面夜间色板。 -->
+    <color name="bg_color">#1b1c1d</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#fff5f5f5</color>
+    <color name="gray">#ffb0b0b0</color>
+
+    <!-- AppCompat accent colors adjusted for dark backgrounds. -->
+    <!-- 针对深色背景调整后的 AppCompat 强调色。 -->
+    <color name="colorAccent">#ff80ab</color>
+    <color name="colorPrimary">#4db6ac</color>
+    <color name="colorPrimaryDark">#00796b</color>
+</resources>

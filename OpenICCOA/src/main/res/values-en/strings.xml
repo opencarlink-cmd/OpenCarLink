@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application identity. -->
+    <!-- 应用基础信息。 -->
+    <string name="app_name">ICCOA Carlink</string>
+
+    <!-- Home-screen connection guidance. -->
+    <!-- 首页连接引导文案。 -->
+    <string name="carLink">ICCOA Carlink Head Unit Assistant</string>
+    <string name="wifi_connect_hint">Enable Bluetooth on your phone and bring it near the head unit.\nEnter the PIN in the connection prompt to verify.</string>
+    <string name="usb_usb_hint">USB projection is configured.\nConnect a USB cable to start projection.</string>
+    <string name="exit">Exit</string>
+    <string name="device_name">Device name: </string>
+    <string name="pin_code_hint">PIN: </string>
+    <string name="ucar_wifi_hint">Wireless projection over Wi-Fi</string>
+
+    <!-- Dialog and status messages. -->
+    <!-- 弹窗与状态提示。 -->
+    <string name="hint">Notice</string>
+    <string name="cancel">Cancel</string>
+    <string name="reconnect">Reconnect</string>
+    <string name="initializing">Initializing, please wait…</string>
+    <string name="init_sdk_failed">Failed to start head-unit projection. Please try again later.</string>
+    <string name="connect_failed">Connection failed. Try the following recovery steps.</string>
+    <string name="auth_failed">• Authentication failed. Check the PIN entered on the phone, or cancel and reconnect from the phone.</string>
+
+    <!-- Recovery suggestions shown after a failed connection. -->
+    <!-- 连接失败时展示的恢复建议。 -->
+    <string name="wireless_reconnect_method">• Tap Reconnect to start the connection again.</string>
+    <string name="usb_reconnect_method">• For USB connections, check that the cable is secure and reconnect it.</string>
+    <string name="need_user_intervention_method">• Check whether a connection prompt on the phone is waiting for confirmation.</string>
+    <string name="unsupport_wireless_method">• The phone or head unit may not support wireless connections. Connect a USB cable instead.</string>
+    <string name="restart_car_method">• Turn off the vehicle, restart the head unit, and try again.</string>
+</resources>

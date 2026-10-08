@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 业务界面使用的基础色。 -->
+    <color name="bg_color">#404142</color>
+    <color name="black">#ff0b0a0b</color>
+    <color name="white">#ffffffff</color>
+    <color name="gray">#ff9c9b9b</color>
+
+    <!-- AppCompat 主题入口色值，由官方 appcompat 资源继续提供其余兼容色板。 -->
+    <color name="colorAccent">#d81b60</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574b</color>
+</resources>
