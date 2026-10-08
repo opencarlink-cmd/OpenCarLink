@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The library intentionally declares no components because it only exposes locale APIs. -->
+<!-- 该 Library 刻意不声明任何组件，因为它只对外暴露 locale API。 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" />
