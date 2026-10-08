@@ -1,0 +1,46 @@
+plugins {
+    // Apply the Android application plugin to build the installable head-unit app.
+    // 应用 Android Application 插件，用于构建可安装的车机应用。
+    id 'com.android.application'
+}
+
+// Apply shared Android SDK and Java defaults after the Android plugin is available.
+// 在 Android 插件可用后应用共享的 Android SDK 与 Java 默认配置。
+apply from: rootProject.file('gradle/android-common.gradle')
+
+android {
+    // Keep the app namespace and application ID stable for future upgrades.
+    // 保持应用命名空间与 applicationId 稳定，避免后续升级链路断裂。
+    namespace = 'com.opencarlink.app'
+
+    defaultConfig {
+        applicationId = 'com.opencarlink.app'
+        versionCode = 1
+        versionName = '0.1.0'
+    }
+
+    lint {
+        // API 37 is the explicit Android 17 target required by this project.
+        // API 37 是本项目明确要求的 Android 17 目标版本，因此屏蔽与该目标冲突的提示。
+        disable.add('OldTargetApi')
+    }
+
+    bundle {
+        language {
+            // Keep all language resources in the base APK because OpenLanguage
+            // changes the application locale at runtime.
+            // 由于 OpenLanguage 会在运行时切换应用 locale，所有语言资源必须保留在基础 APK 中。
+            enableSplit = false
+        }
+    }
+}
+
+dependencies {
+    // Consume the CarPlay library through a Gradle project dependency.
+    // 通过 Gradle 项目依赖消费 CarPlay Library。
+    implementation project(':OpenCarPlay')
+
+    // Consume the language library through a Gradle project dependency.
+    // 通过 Gradle 项目依赖消费 Language Library。
+    implementation project(':OpenLanguage')
+}

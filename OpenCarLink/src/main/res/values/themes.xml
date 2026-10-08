@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Use a platform theme available since API 14 to preserve API 19 compatibility. -->
+    <!-- 使用自 API 14 起可用的系统主题，以保持 API 19 兼容性。 -->
+    <style name="Theme.OpenCarLink" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
+</resources>

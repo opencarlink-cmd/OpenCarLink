@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Product name used by the launcher and initial screen. -->
+    <!-- 启动器与初始界面使用的产品名称。 -->
+    <string name="app_name">OpenCarLink</string>
+</resources>

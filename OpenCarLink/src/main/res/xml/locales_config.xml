@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Declare every locale exposed to the Android 13+ per-app language settings. -->
+<!-- 声明 Android 13+ 应用级语言设置中暴露的全部 locale。 -->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="en" />
+    <locale android:name="zh-CN" />
+    <locale android:name="zh-TW" />
+    <locale android:name="zh-HK" />
+    <locale android:name="ja" />
+    <locale android:name="ko" />
+    <locale android:name="es" />
+    <locale android:name="pt-BR" />
+    <locale android:name="fr" />
+    <locale android:name="de" />
+    <locale android:name="it" />
+    <locale android:name="ru" />
+    <locale android:name="ar" />
+    <locale android:name="tr" />
+    <locale android:name="hi" />
+    <locale android:name="id" />
+    <locale android:name="th" />
+    <locale android:name="vi" />
+</locale-config>
