@@ -15,6 +15,9 @@ android {
 
     defaultConfig {
         applicationId = 'com.opencarlink.app'
+        // Enable multidex because the host application consumes the large ICCOA library.
+        // 启用 multidex，因为宿主应用需要消费体积较大的 ICCOA Library。
+        multiDexEnabled = true
         versionCode = 1
         versionName = '0.1.0'
     }
@@ -23,6 +26,12 @@ android {
         // API 37 is the explicit Android 17 target required by this project.
         // API 37 是本项目明确要求的 Android 17 目标版本，因此屏蔽与该目标冲突的提示。
         disable.add('OldTargetApi')
+    }
+
+    compileOptions {
+        // Consume the ICCOA library which requires core library desugaring on API 19.
+        // 消费在 API 19 上依赖 core library desugaring 的 ICCOA Library。
+        coreLibraryDesugaringEnabled = true
     }
 
     bundle {
@@ -36,9 +45,26 @@ android {
 }
 
 dependencies {
+    // Provide the shared desugaring runtime required by the ICCOA library.
+    // 提供 ICCOA Library 所需的共享脱糖运行时。
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+
+    // Provide the legacy multidex runtime required on Android 4.4.
+    // 为 Android 4.4 提供旧版 multidex 运行时。
+    implementation 'androidx.multidex:multidex:2.0.1'
+
     // Consume the CarPlay library through a Gradle project dependency.
     // 通过 Gradle 项目依赖消费 CarPlay Library。
     implementation project(':OpenCarPlay')
+
+    // Consume each protocol library through a Gradle project dependency.
+    // 通过 Gradle 项目依赖消费各协议 Library。
+    implementation project(':OpenAuto')
+    implementation project(':OpenICCOA')
+    implementation project(':OpenCarLife')
+    implementation project(':OpenCarbit')
+    implementation project(':OpenHiCar')
+    implementation project(':OpenAirPlay')
 
     // Consume the language library through a Gradle project dependency.
     // 通过 Gradle 项目依赖消费 Language Library。
